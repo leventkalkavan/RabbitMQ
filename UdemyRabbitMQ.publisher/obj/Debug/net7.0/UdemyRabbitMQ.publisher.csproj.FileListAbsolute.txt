@@ -1,0 +1,17 @@
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.publisher/bin/Debug/net7.0/UdemyRabbitMQ.publisher
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.publisher/bin/Debug/net7.0/UdemyRabbitMQ.publisher.deps.json
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.publisher/bin/Debug/net7.0/UdemyRabbitMQ.publisher.runtimeconfig.json
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.publisher/bin/Debug/net7.0/UdemyRabbitMQ.publisher.dll
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.publisher/bin/Debug/net7.0/UdemyRabbitMQ.publisher.pdb
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.publisher/bin/Debug/net7.0/RabbitMQ.Client.dll
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.publisher/obj/Debug/net7.0/UdemyRabbitMQ.publisher.csproj.AssemblyReference.cache
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.publisher/obj/Debug/net7.0/UdemyRabbitMQ.publisher.GeneratedMSBuildEditorConfig.editorconfig
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.publisher/obj/Debug/net7.0/UdemyRabbitMQ.publisher.AssemblyInfoInputs.cache
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.publisher/obj/Debug/net7.0/UdemyRabbitMQ.publisher.AssemblyInfo.cs
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.publisher/obj/Debug/net7.0/UdemyRabbitMQ.publisher.csproj.CoreCompileInputs.cache
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.publisher/obj/Debug/net7.0/UdemyRabbitMQ.publisher.csproj.CopyComplete
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.publisher/obj/Debug/net7.0/UdemyRabbitMQ.publisher.dll
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.publisher/obj/Debug/net7.0/refint/UdemyRabbitMQ.publisher.dll
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.publisher/obj/Debug/net7.0/UdemyRabbitMQ.publisher.pdb
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.publisher/obj/Debug/net7.0/UdemyRabbitMQ.publisher.genruntimeconfig.cache
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.publisher/obj/Debug/net7.0/ref/UdemyRabbitMQ.publisher.dll

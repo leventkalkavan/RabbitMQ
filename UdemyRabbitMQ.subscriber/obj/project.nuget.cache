@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "ng8nRFNFNfnIE4DZNhQHef/xbxjPak30MdCwx4L40vOv7N1rT6pQ0hHUPDxGLvtONja5sHBlc5UFkLtAbDMRRw==",
+  "success": true,
+  "projectFilePath": "/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.subscriber/UdemyRabbitMQ.subscriber.csproj",
+  "expectedPackageFiles": [
+    "/Users/leventkalkavan/.nuget/packages/rabbitmq.client/6.8.1/rabbitmq.client.6.8.1.nupkg.sha512",
+    "/Users/leventkalkavan/.nuget/packages/system.memory/4.5.5/system.memory.4.5.5.nupkg.sha512",
+    "/Users/leventkalkavan/.nuget/packages/system.threading.channels/7.0.0/system.threading.channels.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConsoleApps", "ConsoleApps", "{8C2C104F-523B-479C-A7E8-C94875B1ED2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdemyRabbitMQ.publisher", "UdemyRabbitMQ.publisher\UdemyRabbitMQ.publisher.csproj", "{F46C6341-D001-4281-9472-11C8A817E488}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdemyRabbitMQ.subscriber", "UdemyRabbitMQ.subscriber\UdemyRabbitMQ.subscriber.csproj", "{8D553AF6-DD75-4E17-960D-52C145C3572C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F46C6341-D001-4281-9472-11C8A817E488} = {8C2C104F-523B-479C-A7E8-C94875B1ED2E}
+		{8D553AF6-DD75-4E17-960D-52C145C3572C} = {8C2C104F-523B-479C-A7E8-C94875B1ED2E}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F46C6341-D001-4281-9472-11C8A817E488}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F46C6341-D001-4281-9472-11C8A817E488}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F46C6341-D001-4281-9472-11C8A817E488}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F46C6341-D001-4281-9472-11C8A817E488}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D553AF6-DD75-4E17-960D-52C145C3572C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D553AF6-DD75-4E17-960D-52C145C3572C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D553AF6-DD75-4E17-960D-52C145C3572C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D553AF6-DD75-4E17-960D-52C145C3572C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

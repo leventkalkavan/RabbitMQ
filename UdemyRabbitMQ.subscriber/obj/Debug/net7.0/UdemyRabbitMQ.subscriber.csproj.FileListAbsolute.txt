@@ -1,0 +1,17 @@
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.subscriber/bin/Debug/net7.0/UdemyRabbitMQ.subscriber
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.subscriber/bin/Debug/net7.0/UdemyRabbitMQ.subscriber.deps.json
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.subscriber/bin/Debug/net7.0/UdemyRabbitMQ.subscriber.runtimeconfig.json
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.subscriber/bin/Debug/net7.0/UdemyRabbitMQ.subscriber.dll
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.subscriber/bin/Debug/net7.0/UdemyRabbitMQ.subscriber.pdb
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.subscriber/bin/Debug/net7.0/RabbitMQ.Client.dll
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.subscriber/obj/Debug/net7.0/UdemyRabbitMQ.subscriber.csproj.AssemblyReference.cache
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.subscriber/obj/Debug/net7.0/UdemyRabbitMQ.subscriber.GeneratedMSBuildEditorConfig.editorconfig
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.subscriber/obj/Debug/net7.0/UdemyRabbitMQ.subscriber.AssemblyInfoInputs.cache
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.subscriber/obj/Debug/net7.0/UdemyRabbitMQ.subscriber.AssemblyInfo.cs
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.subscriber/obj/Debug/net7.0/UdemyRabbitMQ.subscriber.csproj.CoreCompileInputs.cache
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.subscriber/obj/Debug/net7.0/UdemyRabbitMQ.subscriber.csproj.CopyComplete
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.subscriber/obj/Debug/net7.0/UdemyRabbitMQ.subscriber.dll
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.subscriber/obj/Debug/net7.0/refint/UdemyRabbitMQ.subscriber.dll
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.subscriber/obj/Debug/net7.0/UdemyRabbitMQ.subscriber.pdb
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.subscriber/obj/Debug/net7.0/UdemyRabbitMQ.subscriber.genruntimeconfig.cache
+/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQ.subscriber/obj/Debug/net7.0/ref/UdemyRabbitMQ.subscriber.dll
