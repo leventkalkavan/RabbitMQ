@@ -7,12 +7,17 @@ factory.Uri = new Uri("amqps://umlnivor:onJcuoGCaUsIzS4T52YRgGBC1HfIoU3y@fish.rm
 
 using var connection = factory.CreateConnection();
 var channel = connection.CreateModel();
-//publisherda olustugundan eminsen channeli silebilirsin ama degilsen burda otomatik olusacaktir hata almazsin
-//channel.QueueDeclare("helloque", true, false, false);
 
-channel.BasicQos(0,1,true);
+//kalici kuyruk icin
+var randemQue = "log-database-save-queque"; 
+    //channel.QueueDeclare().QueueName; gecici kuyruk
+channel.QueueDeclare(randemQue, true, false, false);
+channel.QueueBind(randemQue, "logs-fanout", "", null);
+
+channel.BasicQos(0, 1, true);
 var consumer = new EventingBasicConsumer(channel);
-channel.BasicConsume("helloque", false, consumer);
+channel.BasicConsume(randemQue, false, consumer);
+Console.WriteLine("Loglar dinleniyor..");
 consumer.Received += (object sender, BasicDeliverEventArgs e) =>
 {
     var message = Encoding.UTF8.GetString(e.Body.ToArray());
