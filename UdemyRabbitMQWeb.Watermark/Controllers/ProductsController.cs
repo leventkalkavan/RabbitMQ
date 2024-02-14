@@ -6,24 +6,27 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using UdemyRabbitMQWeb.Watermark.Models;
+using UdemyRabbitMQWeb.Watermark.Services;
 
 namespace UdemyRabbitMQWeb.Watermark.Controllers
 {
     public class ProductsController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly RabbitMQPublisher _rabbitMqPublisher;
 
-        public ProductsController(AppDbContext context)
+        public ProductsController(AppDbContext context, RabbitMQPublisher rabbitMqPublisher)
         {
             _context = context;
+            _rabbitMqPublisher = rabbitMqPublisher;
         }
 
         // GET: Products
         public async Task<IActionResult> Index()
         {
-              return _context.Products != null ? 
-                          View(await _context.Products.ToListAsync()) :
-                          Problem("Entity set 'AppDbContext.Products'  is null.");
+            return _context.Products != null
+                ? View(await _context.Products.ToListAsync())
+                : Problem("Entity set 'AppDbContext.Products'  is null.");
         }
 
         // GET: Products/Details/5
@@ -55,14 +58,33 @@ namespace UdemyRabbitMQWeb.Watermark.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Price,Stock,PictureUrl")] Product product)
+        public async Task<IActionResult> Create([Bind("Id,Name,Price,Stock,PictureUrl")] Product product,
+            IFormFile ImageFile)
         {
-            if (ModelState.IsValid)
+            if (ImageFile is { Length: > 0 })
             {
-                _context.Add(product);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                var randomImageName = Guid.NewGuid() + Path.GetExtension(ImageFile.FileName);
+
+
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", randomImageName);
+
+
+                await using FileStream stream = new(path, FileMode.Create);
+
+
+                await ImageFile.CopyToAsync(stream);
+
+
+                _rabbitMqPublisher.Publish(new ProductImageCreatedEvent() { ImageName = randomImageName });
+
+                product.PictureUrl = randomImageName;
             }
+
+
+            _context.Add(product);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+
             return View(product);
         }
 
@@ -79,6 +101,7 @@ namespace UdemyRabbitMQWeb.Watermark.Controllers
             {
                 return NotFound();
             }
+
             return View(product);
         }
 
@@ -112,8 +135,10 @@ namespace UdemyRabbitMQWeb.Watermark.Controllers
                         throw;
                     }
                 }
+
                 return RedirectToAction(nameof(Index));
             }
+
             return View(product);
         }
 
@@ -144,19 +169,20 @@ namespace UdemyRabbitMQWeb.Watermark.Controllers
             {
                 return Problem("Entity set 'AppDbContext.Products'  is null.");
             }
+
             var product = await _context.Products.FindAsync(id);
             if (product != null)
             {
                 _context.Products.Remove(product);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool ProductExists(int id)
         {
-          return (_context.Products?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Products?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }
