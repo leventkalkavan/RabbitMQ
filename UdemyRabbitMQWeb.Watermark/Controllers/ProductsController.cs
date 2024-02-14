@@ -1,9 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using UdemyRabbitMQWeb.Watermark.Models;
 using UdemyRabbitMQWeb.Watermark.Services;
@@ -58,35 +54,28 @@ namespace UdemyRabbitMQWeb.Watermark.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Price,Stock,PictureUrl")] Product product,
-            IFormFile ImageFile)
+        public async Task<IActionResult> Create([Bind("Id,Name,Price,Stock,PictureUrl")] Product product, IFormFile ImageFile)
         {
             if (ImageFile is { Length: > 0 })
             {
                 var randomImageName = Guid.NewGuid() + Path.GetExtension(ImageFile.FileName);
-
-
                 var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", randomImageName);
 
-
-                await using FileStream stream = new(path, FileMode.Create);
-
-
-                await ImageFile.CopyToAsync(stream);
-
+                await using (FileStream stream = new(path, FileMode.Create))
+                {
+                    await ImageFile.CopyToAsync(stream);
+                }
 
                 _rabbitMqPublisher.Publish(new ProductImageCreatedEvent() { ImageName = randomImageName });
 
                 product.PictureUrl = randomImageName;
             }
 
-
             _context.Add(product);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-
-            return View(product);
         }
+
 
         // GET: Products/Edit/5
         public async Task<IActionResult> Edit(int? id)

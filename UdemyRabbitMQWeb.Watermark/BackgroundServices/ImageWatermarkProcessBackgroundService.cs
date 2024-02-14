@@ -1,16 +1,8 @@
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
-using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.IO;
-using System.Linq;
 using System.Text;
 using System.Text.Json;
-using System.Threading;
-using System.Threading.Tasks;
 using UdemyRabbitMQWeb.Watermark.Services;
 
 namespace UdemyRabbitMQWeb.Watermark.BackgroundServices
@@ -21,8 +13,7 @@ namespace UdemyRabbitMQWeb.Watermark.BackgroundServices
         private readonly ILogger<ImageWatermarkProcessBackgroundService> _logger;
         private IModel _channel;
 
-        public ImageWatermarkProcessBackgroundService(
-            ILogger<ImageWatermarkProcessBackgroundService> logger, RabbitMQClientService rabbitMqClient)
+        public ImageWatermarkProcessBackgroundService(ILogger<ImageWatermarkProcessBackgroundService> logger, RabbitMQClientService rabbitMqClient)
         {
             _logger = logger;
             _rabbitMqClient = rabbitMqClient;
@@ -31,6 +22,7 @@ namespace UdemyRabbitMQWeb.Watermark.BackgroundServices
         public override Task StartAsync(CancellationToken cancellationToken)
         {
             _channel = _rabbitMqClient.Connect();
+
             _channel.BasicQos(0, 1, false);
 
             return base.StartAsync(cancellationToken);
@@ -47,12 +39,12 @@ namespace UdemyRabbitMQWeb.Watermark.BackgroundServices
 
         private Task Consumer_Received(object sender, BasicDeliverEventArgs @event)
         {
+            Task.Delay(10000).Wait();
             try
             {
                 var productImageCreatedEvent =
                     JsonSerializer.Deserialize<ProductImageCreatedEvent>(
                         Encoding.UTF8.GetString(@event.Body.ToArray()));
-
                 var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img",
                     productImageCreatedEvent.ImageName);
 
@@ -62,7 +54,7 @@ namespace UdemyRabbitMQWeb.Watermark.BackgroundServices
 
                 using var graphic = Graphics.FromImage(img);
 
-                var font = new Font(FontFamily.GenericMonospace, 32, FontStyle.Bold, GraphicsUnit.Pixel);
+                var font = new Font(FontFamily.GenericMonospace, 40, FontStyle.Bold, GraphicsUnit.Pixel);
 
                 var textSize = graphic.MeasureString(siteName, font);
 
@@ -85,7 +77,7 @@ namespace UdemyRabbitMQWeb.Watermark.BackgroundServices
             }
             catch (Exception ex)
             {
-                throw;
+                _logger.LogError(ex.Message);
             }
 
             return Task.CompletedTask;
