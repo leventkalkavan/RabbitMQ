@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "dgSpecHash": "TP9DOemfJVyoKBmJg1/b96qXm7/5ZlagZzqOBd2xCsLzsIcvDYcMI2vBpgGnL2eM5Ewz2zgYlM5yx9CDvorR0A==",
+  "success": true,
+  "projectFilePath": "/Users/leventkalkavan/Desktop/Projeler/UdemyRabbitMQ/UdemyRabbitMQWeb.Watermark/UdemyRabbitMQWeb.Watermark.csproj",
+  "expectedPackageFiles": [
+    "/Users/leventkalkavan/.nuget/packages/microsoft.entityframeworkcore/7.0.16/microsoft.entityframeworkcore.7.0.16.nupkg.sha512",
+    "/Users/leventkalkavan/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.16/microsoft.entityframeworkcore.abstractions.7.0.16.nupkg.sha512",
+    "/Users/leventkalkavan/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.16/microsoft.entityframeworkcore.analyzers.7.0.16.nupkg.sha512",
+    "/Users/leventkalkavan/.nuget/packages/microsoft.entityframeworkcore.inmemory/7.0.16/microsoft.entityframeworkcore.inmemory.7.0.16.nupkg.sha512",
+    "/Users/leventkalkavan/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0/microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "/Users/leventkalkavan/.nuget/packages/microsoft.extensions.caching.memory/7.0.0/microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
+    "/Users/leventkalkavan/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "/Users/leventkalkavan/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "/Users/leventkalkavan/.nuget/packages/microsoft.extensions.logging/7.0.0/microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "/Users/leventkalkavan/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0/microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "/Users/leventkalkavan/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "/Users/leventkalkavan/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "/Users/leventkalkavan/.nuget/packages/microsoft.win32.systemevents/7.0.0/microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "/Users/leventkalkavan/.nuget/packages/rabbitmq.client/6.8.1/rabbitmq.client.6.8.1.nupkg.sha512",
+    "/Users/leventkalkavan/.nuget/packages/system.drawing.common/7.0.0/system.drawing.common.7.0.0.nupkg.sha512",
+    "/Users/leventkalkavan/.nuget/packages/system.memory/4.5.5/system.memory.4.5.5.nupkg.sha512",
+    "/Users/leventkalkavan/.nuget/packages/system.threading.channels/7.0.0/system.threading.channels.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
