@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using RabbitMQ.Client;
 using UdemyRabbitMQWeb.Watermark.Models;
+using UdemyRabbitMQWeb.Watermark.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,8 +9,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    options.UseInMemoryDatabase(databaseName:"udemyRabbitMqDb");
+    options.UseInMemoryDatabase(databaseName: "udemyRabbitMqDb");
 });
+builder.Services.AddSingleton(sp => new ConnectionFactory()
+    { Uri = new Uri(builder.Configuration.GetConnectionString("RabbitMQ")) });
+builder.Services.AddSingleton<RabbitMQClientService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
